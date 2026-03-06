@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -5,22 +7,13 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center mb-4">
-              <svg className="w-14 h-14" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                {/* White background square with rounded corners */}
-                <rect x="14" y="14" width="172" height="172" rx="28" fill="white" />
-
-                {/* Black checkmark/U shape - left vertical stroke */}
-                <g fill="none" stroke="black" strokeWidth="26" strokeLinecap="round" strokeLinejoin="round">
-                  {/* Left vertical line */}
-                  <path d="M 60 50 L 60 120" />
-
-                  {/* Curved bottom - connects vertical to diagonal */}
-                  <path d="M 60 120 Q 60 140 75 150 Q 100 165 125 145" />
-
-                  {/* Right diagonal line going up */}
-                  <path d="M 125 145 L 125 50" />
-                </g>
-              </svg>
+              <Image
+                src="/logo-footer.png"
+                alt="Automatize Logo"
+                width={56}
+                height={56}
+                className="h-14 w-auto"
+              />
             </div>
             <p className="text-gray-400 text-sm">Transformando o marketing de empresas brasileiras desde 2019.</p>
           </div>
