@@ -2,13 +2,22 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <svg className="w-12 h-12" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            {/* Black shape */}
-            <rect x="40" y="40" width="50" height="50" rx="10" fill="black" />
-            <path d="M 90 40 Q 120 40 120 70 Q 120 100 90 100 L 90 60 Q 100 60 100 70 Q 100 80 90 90 Z" fill="black" />
-            {/* White shape */}
-            <rect x="70" y="70" width="35" height="35" rx="8" fill="white" />
+        <div className="flex items-center">
+          <svg className="w-16 h-16" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            {/* Black background square with rounded corners */}
+            <rect x="14" y="14" width="172" height="172" rx="28" fill="black" />
+
+            {/* White checkmark/U shape - left vertical stroke */}
+            <g fill="none" stroke="white" strokeWidth="26" strokeLinecap="round" strokeLinejoin="round">
+              {/* Left vertical line */}
+              <path d="M 60 50 L 60 120" />
+
+              {/* Curved bottom - connects vertical to diagonal */}
+              <path d="M 60 120 Q 60 140 75 150 Q 100 165 125 145" />
+
+              {/* Right diagonal line going up */}
+              <path d="M 125 145 L 125 50" />
+            </g>
           </svg>
         </div>
         <nav className="hidden md:flex gap-8">

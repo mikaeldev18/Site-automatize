@@ -4,13 +4,22 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <svg className="w-10 h-10" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                {/* White shape for dark background */}
-                <rect x="40" y="40" width="50" height="50" rx="10" fill="white" />
-                <path d="M 90 40 Q 120 40 120 70 Q 120 100 90 100 L 90 60 Q 100 60 100 70 Q 100 80 90 90 Z" fill="white" />
-                {/* Black shape */}
-                <rect x="70" y="70" width="35" height="35" rx="8" fill="black" />
+            <div className="flex items-center mb-4">
+              <svg className="w-14 h-14" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                {/* White background square with rounded corners */}
+                <rect x="14" y="14" width="172" height="172" rx="28" fill="white" />
+
+                {/* Black checkmark/U shape - left vertical stroke */}
+                <g fill="none" stroke="black" strokeWidth="26" strokeLinecap="round" strokeLinejoin="round">
+                  {/* Left vertical line */}
+                  <path d="M 60 50 L 60 120" />
+
+                  {/* Curved bottom - connects vertical to diagonal */}
+                  <path d="M 60 120 Q 60 140 75 150 Q 100 165 125 145" />
+
+                  {/* Right diagonal line going up */}
+                  <path d="M 125 145 L 125 50" />
+                </g>
               </svg>
             </div>
             <p className="text-gray-400 text-sm">Transformando o marketing de empresas brasileiras desde 2019.</p>
