@@ -6,13 +6,13 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-4 hover:scale-110 transition-transform duration-300">
               <Image
                 src="/logo.webp"
                 alt="Automatize Logo"
-                width={70}
-                height={70}
-                className="h-14 w-auto"
+                width={120}
+                height={120}
+                className="h-20 w-auto"
               />
             </div>
             <p className="text-gray-400 text-sm">Transformando o marketing de empresas brasileiras desde 2019.</p>

@@ -35,7 +35,7 @@ export default function Services() {
   return (
     <section id="servicos" className="py-20 sm:py-32 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4">
             Nossos Serviços
           </h2>
@@ -48,9 +48,10 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-8 rounded-2xl border border-gray-200 hover:border-black hover:shadow-lg transition group"
+              className="p-8 rounded-2xl border border-gray-200 hover:border-black hover:shadow-lg hover:-translate-y-2 transition group animate-slide-up"
+              style={{animationDelay: `${index * 0.1}s`}}
             >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition">{service.icon}</div>
+              <div className="text-4xl mb-4 group-hover:scale-125 transition-transform duration-300">{service.icon}</div>
               <h3 className="text-xl font-bold text-black mb-3">{service.title}</h3>
               <p className="text-gray-600 leading-relaxed">{service.description}</p>
             </div>

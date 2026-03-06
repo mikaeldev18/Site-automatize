@@ -116,7 +116,7 @@ export default function PricingPlans() {
           <h3 className="text-2xl font-bold text-black mb-6">Estrutura de Preço Detalhada</h3>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h4 className="font-bold text-black mb-4">Plano Inicial - R$ 900/mês</h4>
+              <h4 className="font-bold text-black mb-4">Plano Otimizado - R$ 900/mês</h4>
               <ul className="space-y-2 text-gray-700">
                 <li>• Primeiros 3 meses: <span className="font-semibold">R$ 900/mês</span></li>
                 <li>• A partir do 4º mês: <span className="font-semibold">R$ 1.300/mês</span></li>
