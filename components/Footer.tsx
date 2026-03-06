@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -5,27 +7,13 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center mb-4">
-              <svg
-                className="w-14 h-14"
-                viewBox="0 0 240 240"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-label="Automatize Logo"
-              >
-                {/* White rounded square background */}
-                <rect x="20" y="20" width="200" height="200" rx="35" fill="white" />
-
-                {/* Black stylized checkmark/U shape */}
-                <g fill="none" stroke="black" strokeWidth="28" strokeLinecap="round" strokeLinejoin="round">
-                  {/* Left vertical line */}
-                  <path d="M 70 60 L 70 130" />
-
-                  {/* Bottom curve connecting to right diagonal */}
-                  <path d="M 70 130 Q 70 155 90 170 Q 120 190 155 165" />
-
-                  {/* Right diagonal line */}
-                  <path d="M 155 165 L 155 60" />
-                </g>
-              </svg>
+              <Image
+                src="/logo.webp"
+                alt="Automatize Logo"
+                width={70}
+                height={70}
+                className="h-14 w-auto"
+              />
             </div>
             <p className="text-gray-400 text-sm">Transformando o marketing de empresas brasileiras desde 2019.</p>
           </div>
